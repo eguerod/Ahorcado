@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane fx:id="view" nodeOrientation="LEFT_TO_RIGHT" prefHeight="400.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1">
+   <bottom>
+      <HBox alignment="CENTER" spacing="5.0" BorderPane.alignment="CENTER">
+         <children>
+            <TextField fx:id="intentoText" />
+            <Button fx:id="letraButton" defaultButton="true" mnemonicParsing="false" onAction="#onLetraAction" text="Letra" />
+            <Button fx:id="resolverButton" mnemonicParsing="false" onAction="#onResolverAction" text="Resolver" />
+         </children>
+         <BorderPane.margin>
+            <Insets top="5.0" />
+         </BorderPane.margin>
+      </HBox>
+   </bottom>
+   <padding>
+      <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+   </padding>
+   <right>
+      <GridPane BorderPane.alignment="CENTER">
+        <columnConstraints>
+          <ColumnConstraints halignment="RIGHT" hgrow="NEVER" />
+          <ColumnConstraints hgrow="SOMETIMES" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints vgrow="NEVER" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="NEVER" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="NEVER" />
+        </rowConstraints>
+         <children>
+            <Label text="Puntos:" GridPane.columnSpan="2" GridPane.halignment="CENTER">
+               <GridPane.margin>
+                  <Insets />
+               </GridPane.margin>
+            </Label>
+            <Label text="Palabras acertadas:" GridPane.rowIndex="1">
+               <GridPane.margin>
+                  <Insets right="5.0" />
+               </GridPane.margin>
+            </Label>
+            <Label text="Letras acertadas:" GridPane.rowIndex="2">
+               <GridPane.margin>
+                  <Insets right="5.0" />
+               </GridPane.margin>
+            </Label>
+            <TextField fx:id="palabrasAcertadasText" editable="false" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefWidth="50.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <TextField fx:id="letrasAcertadasText" editable="false" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="50.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+         </children>
+      </GridPane>
+   </right>
+   <center>
+      <GridPane alignment="CENTER" BorderPane.alignment="CENTER">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints />
+          <RowConstraints vgrow="NEVER" />
+          <RowConstraints vgrow="NEVER" />
+        </rowConstraints>
+         <children>
+            <ImageView fx:id="image" fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" GridPane.halignment="CENTER" />
+            <Label fx:id="palabraOcultaLabel" text="Label" GridPane.halignment="CENTER" GridPane.rowIndex="1">
+               <font>
+                  <Font size="36.0" />
+               </font></Label>
+            <Label fx:id="letrasJugadasLabel" text="Label" GridPane.halignment="CENTER" GridPane.rowIndex="2">
+               <font>
+                  <Font size="36.0" />
+               </font></Label>
+         </children>
+      </GridPane>
+   </center>
+</BorderPane>

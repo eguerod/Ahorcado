@@ -1,0 +1,17 @@
+
+.gitattributes
+target/classes/fxml/PalabrasView.fxml
+target/classes/fxml/PartidaView.fxml
+target/classes/fxml/PuntuacionesView.fxml
+target/classes/fxml/RootView.fxml
+target/classes/images/1.png
+target/classes/images/2.png
+target/classes/images/3.png
+target/classes/images/4.png
+target/classes/images/5.png
+target/classes/images/6.png
+target/classes/images/7.png
+target/classes/images/8.png
+target/classes/images/9.png
+target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst
+target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst
